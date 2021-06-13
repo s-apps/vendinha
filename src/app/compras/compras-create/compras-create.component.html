@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-title>
+      Nova compra
+  </mat-card-title>
+  <form [formGroup]="formCompras" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Cliente *</mat-label>
+      <mat-select (selectionChange)="setValue($event.value)">
+        <mat-option *ngFor="let conta of contas" [value]="conta.id">{{ conta.nome }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Data da compra *" name="data" formControlName="data">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Descrição *" name="descricao" formControlName="descricao">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Valor *" name="valor" formControlName="valor">
+    </mat-form-field>
+    <div class="action-buttons">
+      <button mat-raised-button color="primary" type="submit">
+        Salvar
+      </button>
+      <button mat-raised-button type="submit" (click)="onCancel($event)">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</mat-card>

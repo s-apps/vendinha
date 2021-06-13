@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+.mat-card {
+  margin-top: 40px;
+}
+
+.mat-card-avatar {
+  height: 50px;
+  width: 50px;
+}
+
+.header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

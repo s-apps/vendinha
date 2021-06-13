@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-title>
+      Novo cliente
+  </mat-card-title>
+  <form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
+    <div mat-card-avatar class="header-image"></div>
+    <mat-form-field>
+        <input matInput placeholder="Nome completo *" name="nome" formControlName="nome">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="CPF *" name="cpf" formControlName="cpf">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Telefone" name="telefone" formControlName="telefone">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Data de nascimento *" name="data_nascimento" formControlName="data_nascimento">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Idade" name="idade" formControlName="idade">
+    </mat-form-field>
+    <div class="action-buttons">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!formCliente.valid">
+        Salvar
+      </button>
+      <button mat-raised-button type="submit" (click)="onCancel($event)">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</mat-card>
