@@ -25,8 +25,10 @@
 Primeiramente é preciso instalar a API da Vendinha. Acesse `https://github.com/s-apps/vendinha-api` para clonar ou fazer download da aplicação. É necessário que sua máquina possua o NodeJS instalado.
 Acesse o diretório `vendinha-api` e execute `npm install` para instalar todas as dependências da aplicação. Em seguida execute `npm start`. A aplicação rodará na porta 3000.
 
-Deverá ser criado o usuário `vendinha` com a senha `Vendinh@` no Banco de Dados MySQL. Aqui está a string de conexão ao MySQL: `mysql://vendinha:Vendinh@@localhost:3306/vendinha`.
+Deverá ser criado o usuário `vendinha` com a senha `Vendinh@` no Banco de Dados MySQL. Aqui está a string de conexão ao MySQL: `mysql://vendinha:Vendinh@@localhost:3306/vendinha`. O download da estrutura do banco de dados deve ser feita neste link: [Download Estrutura de Banco de Dados]
 
 Precisamos de um Servidor Web para executar a aplicação desenvolvida com o Angular, ou seja, um Servidor Web que seja capaz de executar arquivos HTML.
 Você poderá clonar ou fazer download da aplicação neste link: `https://github.com/s-apps/vendinha`.
 No Servidor Web, no diretório root, devem ser copiados todos os arquivos que se encontram dentro do diretório `vendinha/dist/vendinha/`. Link: `https://github.com/s-apps/vendinha/tree/main/dist/vendinha`. Feito isso, basta inserir o endereço no navegador. Ex: `http://localhost/`. Se você tiver o PHP e o Apache em sua máquina acesse o diretório `vendinha` onde você verá o arquivo `index.html` e execute `php -S localhost:8000`. Abra o navegador e informe o endereço `http://localhost:8000`.
+
+[Download Estrutura de Banco de Dados]: <https://drive.google.com/file/d/1q7h-Lny3yn4lUZTG6YOMYUNtDnStE2Bb/view?usp=sharing>
