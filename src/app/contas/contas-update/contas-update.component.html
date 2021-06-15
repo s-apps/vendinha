@@ -6,19 +6,19 @@
     <input type="hidden" name="id" formControlName="id">
     <div mat-card-avatar class="header-image"></div>
     <mat-form-field>
-        <input matInput placeholder="Nome completo *" name="nome" formControlName="nome">
+        <input maxlength="45" matInput placeholder="Nome completo *" name="nome" formControlName="nome">
     </mat-form-field>
     <mat-form-field>
-        <input matInput placeholder="CPF *" name="cpf" formControlName="cpf">
+      <input matInput mask="000.000.000-00" placeholder="CPF 000.000.000-00 *" name="cpf" formControlName="cpf">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Telefone" name="telefone" formControlName="telefone">
+      <input matInput mask="(00) 00000-0000" placeholder="Telefone (99) 99999-9999" name="telefone" formControlName="telefone">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Data de nascimento *" name="data_nascimento" formControlName="data_nascimento">
+      <input matInput mask="00/00/0000" placeholder="Data de nascimento dd/mm/aaaa *" name="data_nascimento" formControlName="data_nascimento" (blur)="setAge()">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Idade" name="idade" formControlName="idade">
+      <input maxlength="3" type="number" matInput placeholder="Idade" name="idade" formControlName="idade">
     </mat-form-field>
     <div class="action-buttons">
       <button mat-raised-button color="primary" type="submit" [disabled]="!formCliente.valid">

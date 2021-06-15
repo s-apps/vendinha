@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
-import { SELECT_ITEM_HEIGHT_EM } from '@angular/material/select/select';
 import { Compra } from 'src/app/compras/compra';
 import { ComprasService } from 'src/app/compras/compras.service';
 import { Conta } from '../conta';

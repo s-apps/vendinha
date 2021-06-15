@@ -10,16 +10,16 @@
       </mat-select>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Data da compra *" name="data" formControlName="data">
+      <input matInput mask="00/00/0000" placeholder="Data da compra dd/mm/aaaa *" name="data" formControlName="data">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Descrição *" name="descricao" formControlName="descricao">
+      <input maxlength="50" matInput placeholder="Descrição *" name="descricao" formControlName="descricao">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Valor *" name="valor" formControlName="valor">
+      <input currencyMask matInput placeholder="Valor *" name="valor" formControlName="valor">
     </mat-form-field>
     <div class="action-buttons">
-      <button mat-raised-button color="primary" type="submit">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!formCompras.valid">
         Salvar
       </button>
       <button mat-raised-button type="submit" (click)="onCancel($event)">

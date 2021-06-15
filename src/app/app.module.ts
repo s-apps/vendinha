@@ -7,11 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './template/header/header.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { HttpClientModule } from '@angular/common/http';
-import { LOCALE_ID } from '@angular/core';
-import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
-
-registerLocaleData(localePt, 'pt');
+import { getPortuguesPaginatorIntl } from './material-design/portugues-paginator-intl';
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -27,8 +24,8 @@ registerLocaleData(localePt, 'pt');
   ],
   providers: [
     {
-      provide: LOCALE_ID,
-      useValue: 'pt'
+      provide: MatPaginatorIntl,
+      useValue: getPortuguesPaginatorIntl()
     }
   ],
   bootstrap: [

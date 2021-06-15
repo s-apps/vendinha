@@ -80,12 +80,12 @@
                   <td>{{ compra.data | date: 'dd/MM/yyyy' }}</td>
                   <td colspan="2">{{ compra.descricao}}</td>
                   <td class="text-right">{{ compra.valor | currency:'BRL' }}</td>
-                  <td class="text-center" colspan="2"><button mat-button color="primary" (click)="payOffDebt(compra.compras_id, conta.id)">quitar dívida</button></td>
+                  <td class="text-center" colspan="2"><button mat-button color="warn" (click)="payOffDebt(compra.compras_id, conta.id)">quitar dívida</button></td>
                 </tr>
               </ng-container>
             </ng-container>
             <tr>
-              <td  class="text-right" colspan="3">Total de dívidas</td>
+              <td  class="text-right" colspan="3"><strong>Total de dívidas</strong></td>
               <td class="text-right"><strong>{{ total | currency:'BRL' }}</strong></td>
               <td colspan="2"></td>
             </tr>
@@ -96,7 +96,7 @@
     </cdk-accordion-item>
   </cdk-accordion>
 
-  <mat-paginator
+  <mat-paginator *ngIf="contas.length != 0"
     [length]="length"
     [pageSize]="size"
     (page)="onChangePage($event)">

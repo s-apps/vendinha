@@ -42,6 +42,7 @@ export class ComprasCreateComponent implements OnInit {
   }
 
   onSubmit(){
+    this.formCompras.patchValue({ data: this.dateFormat(this.formCompras.get('data')?.value) });
     this.comprasService.create(this.formCompras.value).subscribe({
       next: res => {
         this.router.navigate([''])
@@ -58,5 +59,13 @@ export class ComprasCreateComponent implements OnInit {
   setValue(event: Event) {
     this.formCompras.patchValue({ contas_id: event });
   }
+
+  dateFormat(date: string) {
+    const dia = date.slice(0, 2);
+    const mes = date.slice(2, 4);
+    const ano = date.slice(4, 8);
+    return `${ano}-${mes}-${dia}`;
+  }
+
 
 }

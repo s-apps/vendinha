@@ -8,6 +8,7 @@ import { ContasDeleteComponent } from './contas-delete/contas-delete.component';
 import { ContasUpdateComponent } from './contas-update/contas-update.component';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ContasRoutingModule,
     MaterialDesignModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxMaskModule.forRoot()
   ]
 })
 export class ContasModule { }
